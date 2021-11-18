@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-card>
+   <ion-card-header>
+     <ion-card-title class="ion-text-center" >Login</ion-card-title>
+   </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="frm" (ngSubmit)="ingresar()">
+        <ion-item>
+          <ion-img src="https://www.nicepng.com/png/detail/207-2073249_open-user-icon-for-login-page.png"></ion-img>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
+        </ion-item>
+        <ion-button expand="block"  [disabled]="frm.invalid" fill="clear" shape="round" color="success" type="submit" >
+          Ingresar
+        </ion-button>
+      </form>
+       
+    </ion-card-content>
+ </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-buttons [routerLink]="['/registro']">
+        Registrase
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

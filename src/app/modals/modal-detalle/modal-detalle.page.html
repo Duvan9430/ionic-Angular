@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slat="start" mode="nd" (click)="closeModal()">
+        <ion-button >
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>  {{tipoDocumento}} {{nombreUser}} Edad: {{edad}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar>
+    <ion-title class="ion-text-center" size="labelNombre">Pelicuas del reservadas</ion-title>
+  </ion-toolbar>
+  <ion-card *ngFor="let item of peliculaReservada;">
+      <ion-row >
+        <ion-col size="6"   >
+          <ion-label position="stacked"  class="labelNombre"> Nombre: </ion-label>
+          <ion-label position="stacked" > {{item.nombre}}</ion-label>
+         </ion-col>
+        <ion-col size="6" >
+          <ion-label position="stacked" class="labelNombre" > Descripcion: </ion-label>
+          <ion-label position="stacked" > {{item.descripcion}}</ion-label>
+        </ion-col>
+      </ion-row>
+  </ion-card>
+</ion-content>

@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "PruebaProyecto",
+	"appId": "com.fet.co",
+	"appName": "SavePaper",
 	"webDir": "www",
 	"bundledWebRuntime": false
 }
